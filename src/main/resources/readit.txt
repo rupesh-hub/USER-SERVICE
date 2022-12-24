@@ -1,0 +1,30 @@
+   //    private final RestTemplate restTemplate;
+   //    private final WebClient webClient;
+
+   //    @Bean
+   //    public WebClient webClient() {
+   //        return WebClient
+   //                .builder()
+   //                .baseUrl(addressBaseURL)
+   //                .build();
+   //    }
+
+    /*GET ADDRESS USING REST TEMPLATE*/
+//    private AddressDTO getAddress(final String userId) {
+//        return this.restTemplate.getForObject(addressBaseURL + "/user/{userId}", AddressDTO.class, userId);
+//    }
+
+    /*CALLING REST API USING WEB-CLIENT*/
+//    private AddressDTO getAddressUsingWebClient(final String userId) {
+//        return webClient
+//                .get()
+//                .uri("/user/" + userId)
+//                .retrieve()
+//                .bodyToMono(AddressDTO.class)
+//                .block();
+//    }
+
+    /*SAVE ADDRESS USING REST TEMPLATE*/
+//    private AddressDTO saveAddress(final AddressDTO addressDTO) {
+//        return this.restTemplate.postForObject(addressBaseURL + "/", addressDTO, AddressDTO.class);
+//    }

@@ -1,0 +1,53 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /user-api/v1.0
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_db?createDatabaseIfNotExit=true
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      default_schema: public
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    generate-ddl: true
+    show-sql: false
+  application:
+    name: USER-SERVICE
+
+  #to allow unlimited file size
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+
+address-service:
+  base-url: http://localhost:8181/address
+
+
+feign:
+  client:
+    config:
+      feignName:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+
+
+
+
+
+
+
+
+
+
+
+
+
